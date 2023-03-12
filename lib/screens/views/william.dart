@@ -1,66 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+
 import '../../helper/db_helper.dart';
 import '../../models/favorite.dart';
 
-class Quotes extends StatefulWidget {
-  const Quotes({Key? key}) : super(key: key);
+class William extends StatefulWidget {
+  const William({Key? key}) : super(key: key);
 
   @override
-  State<Quotes> createState() => _QuotesState();
+  State<William> createState() => _WilliamState();
 }
 
-class _QuotesState extends State<Quotes> {
-  List<Map<String, dynamic>> myList = [
+class _WilliamState extends State<William> {
+
+  List myList = [
     {
-      'link':
-          'https://i2.wp.com/tinypositive.com/wp-content/uploads/2018/08/155-Best-Deep-Meaningful-Quotes-With-Images-34.jpg?fit=734%2C1100&ssl=1',
+      'link': 'https://i.pinimg.com/originals/70/8e/42/708e429370a5476fb402297127e2ff7f.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.Q92GlTcHmR45R2iUdS4jjwHaHa&pid=Api&P=0',
+      'link': 'https://i.pinimg.com/originals/70/8e/42/708e429370a5476fb402297127e2ff7f.jpg',
       'var': false,
     },
     {
-      'link':
-          'http://www.quotesforthemind.com/wp-content/uploads/2018/05/inspiring-and-uplifting-quotes-quote-images-image-about-you-can-only-fail-when-you-stop-trying-to-succeed-in-life.jpg',
+      'link': 'https://lifechrome.com/wp-content/uploads/2019/10/William-Shakespeare-Quotes-5.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse4.mm.bing.net/th?id=OIP.qs2UDJVTmjU_RrAL8JHE4AHaNK&pid=Api&P=0',
+      'link': 'https://i.pinimg.com/originals/4e/db/43/4edb43e4ae053f41f6752870168b55ca.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse2.mm.bing.net/th?id=OIP.PZ4LDNk3_k8ijLUK4clQ8QHaL2&pid=Api&P=0',
+      'link': 'https://i.pinimg.com/originals/2e/9e/7a/2e9e7ab1287e16f2feeba4eaaa2c0d3c.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunshinequotes21-1563300013.jpg  ',
+      'link': 'https://tse1.mm.bing.net/th?id=OIP.VCoUAAkekt-KezYAY1cFBwHaFj&pid=Api&P=0',
       'var': false,
     },
     {
-      'link':
-          'https://cdn.theculturetrip.com/wp-content/uploads/2017/04/hope-quotes-long-31.png',
+      'link': 'https://i.pinimg.com/736x/50/21/6a/50216abf2ebbde903524f0d24bd3b3fe.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse2.mm.bing.net/th?id=OIP.MLLHQs9TWK1anbqpDqJr5gHaL2&pid=Api&P=0',
-      'var': false,
-    },
-    {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.wPacsXurnjICDJQ0chLbkAHaJ4&pid=Api&P=0',
-      'var': false,
-    },
-    {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.BGk5IBu420X4VpmOsEtWCAHaKd&pid=Api&P=0',
+      'link': 'https://cdn.quotesgram.com/img/90/48/1845109741-William_Shakespeare-Quotes-9.jpg',
       'var': false,
     },
   ];
@@ -70,7 +54,7 @@ class _QuotesState extends State<Quotes> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Latest Quotes",
+          "William Shakespeare",
           style: GoogleFonts.arya(
             fontSize: 23,
             fontWeight: FontWeight.w600,
@@ -85,7 +69,7 @@ class _QuotesState extends State<Quotes> {
         child: Column(
           children: [
             ...myList.map(
-              (e) => Padding(
+                  (e) => Padding(
                 padding: const EdgeInsets.all(15),
                 child: Stack(
                   alignment: Alignment.bottomCenter,
@@ -101,8 +85,7 @@ class _QuotesState extends State<Quotes> {
                       height: 50,
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
-                        borderRadius:
-                            BorderRadius.vertical(bottom: Radius.circular(15)),
+                        borderRadius: BorderRadius.vertical(bottom: Radius.circular(15)),
                         color: Colors.black54,
                       ),
                       alignment: Alignment.center,

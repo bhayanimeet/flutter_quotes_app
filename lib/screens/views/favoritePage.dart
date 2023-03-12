@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:quotes/helper/db_helper.dart';
 
 import '../../models/favorite.dart';
@@ -103,8 +104,9 @@ class _FavoritePageState extends State<FavoritePage> {
                     ),
                   );
           } else {
-            return const Center(
-              child: CircularProgressIndicator(),
+            return Center(
+              child: LoadingAnimationWidget.discreteCircle(
+                  color: Colors.indigo, size: 40),
             );
           }
         },

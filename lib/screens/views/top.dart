@@ -4,63 +4,54 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 import '../../helper/db_helper.dart';
 import '../../models/favorite.dart';
 
-class Quotes extends StatefulWidget {
-  const Quotes({Key? key}) : super(key: key);
+class Top extends StatefulWidget {
+  const Top({Key? key}) : super(key: key);
 
   @override
-  State<Quotes> createState() => _QuotesState();
+  State<Top> createState() => _TopState();
 }
 
-class _QuotesState extends State<Quotes> {
-  List<Map<String, dynamic>> myList = [
+class _TopState extends State<Top> {
+
+  List<Map<String,dynamic>> myList = [
     {
-      'link':
-          'https://i2.wp.com/tinypositive.com/wp-content/uploads/2018/08/155-Best-Deep-Meaningful-Quotes-With-Images-34.jpg?fit=734%2C1100&ssl=1',
+      'link': 'https://cutelovequotesforher.org/wp-content/uploads/2015/06/business-motivational-quotes.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.Q92GlTcHmR45R2iUdS4jjwHaHa&pid=Api&P=0',
+      'link': 'https://www.dreamsquote.com/wp-content/uploads/2019/07/Best-Life-Quotes.jpg',
       'var': false,
     },
     {
-      'link':
-          'http://www.quotesforthemind.com/wp-content/uploads/2018/05/inspiring-and-uplifting-quotes-quote-images-image-about-you-can-only-fail-when-you-stop-trying-to-succeed-in-life.jpg',
+      'link': 'https://2.bp.blogspot.com/-36SeQz6fuXs/VUOFTPySX2I/AAAAAAAAByA/o5jTukAwFcI/s1600/Amazing-quotes-I-never-made-one-of-my.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse4.mm.bing.net/th?id=OIP.qs2UDJVTmjU_RrAL8JHE4AHaNK&pid=Api&P=0',
+      'link': 'https://tse4.mm.bing.net/th?id=OIP.P4rcV_WcHIARQ40wTK0TzgHaLJ&pid=Api&P=0',
       'var': false,
     },
     {
-      'link':
-          'https://tse2.mm.bing.net/th?id=OIP.PZ4LDNk3_k8ijLUK4clQ8QHaL2&pid=Api&P=0',
+      'link': "http://4.bp.blogspot.com/-u2pcAbSxGX0/VUWONEzKM1I/AAAAAAAACL8/WVQo1ygh1lc/s1600/Failure-quotes-It's-fine-to-celebrate-success.jpg",
       'var': false,
     },
     {
-      'link':
-          'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunshinequotes21-1563300013.jpg  ',
+      'link': 'https://www.joshloe.com/wp-content/uploads/2018/11/100-short-inspirational-quotes-for-women-inspiring-famous-quotes.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://cdn.theculturetrip.com/wp-content/uploads/2017/04/hope-quotes-long-31.png',
+      'link': 'http://www.baztro.com/wp-content/uploads/2016/01/life-lessons-quotes-tumblr-cool-famous-quotes-about-life-lessons-quotes-wallpaper-hd-wallpaper-hd.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse2.mm.bing.net/th?id=OIP.MLLHQs9TWK1anbqpDqJr5gHaL2&pid=Api&P=0',
+      'link': 'https://www.dreamsquote.com/wp-content/uploads/2018/11/Top-40-Funny-Inspirational-Quotes-That-Will-Inspire-You-Extremely-13.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.wPacsXurnjICDJQ0chLbkAHaJ4&pid=Api&P=0',
+      'link': 'https://www.dailyfunnyquote.com/wp-content/uploads/2019/02/59-Best-Positive-Quotes-for-Success-Short-Inspirational-Quotes-54.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.BGk5IBu420X4VpmOsEtWCAHaKd&pid=Api&P=0',
+      'link': 'https://tse3.mm.bing.net/th?id=OIP.zzDACgiydwMg4kG0f3lU-QHaHa&pid=Api&P=0',
       'var': false,
     },
   ];
@@ -70,7 +61,7 @@ class _QuotesState extends State<Quotes> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Latest Quotes",
+          "Top Quotes",
           style: GoogleFonts.arya(
             fontSize: 23,
             fontWeight: FontWeight.w600,
@@ -85,7 +76,7 @@ class _QuotesState extends State<Quotes> {
         child: Column(
           children: [
             ...myList.map(
-              (e) => Padding(
+                  (e) => Padding(
                 padding: const EdgeInsets.all(15),
                 child: Stack(
                   alignment: Alignment.bottomCenter,
@@ -101,8 +92,7 @@ class _QuotesState extends State<Quotes> {
                       height: 50,
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
-                        borderRadius:
-                            BorderRadius.vertical(bottom: Radius.circular(15)),
+                        borderRadius: BorderRadius.vertical(bottom: Radius.circular(15)),
                         color: Colors.black54,
                       ),
                       alignment: Alignment.center,

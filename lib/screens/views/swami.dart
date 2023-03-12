@@ -1,66 +1,58 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+
 import '../../helper/db_helper.dart';
 import '../../models/favorite.dart';
 
-class Quotes extends StatefulWidget {
-  const Quotes({Key? key}) : super(key: key);
+class Swami extends StatefulWidget {
+  const Swami({Key? key}) : super(key: key);
 
   @override
-  State<Quotes> createState() => _QuotesState();
+  State<Swami> createState() => _SwamiState();
 }
 
-class _QuotesState extends State<Quotes> {
-  List<Map<String, dynamic>> myList = [
+class _SwamiState extends State<Swami> {
+
+  List myList = [
     {
-      'link':
-          'https://i2.wp.com/tinypositive.com/wp-content/uploads/2018/08/155-Best-Deep-Meaningful-Quotes-With-Images-34.jpg?fit=734%2C1100&ssl=1',
+      'link': 'https://tse3.mm.bing.net/th?id=OIP.0UrFBlD7agInWu_YT9OPvQHaF7&pid=Api&P=0',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.Q92GlTcHmR45R2iUdS4jjwHaHa&pid=Api&P=0',
+      'link': 'https://assets.wallpapersin4k.org/uploads/2017/04/Swami-Vivekananda-HD-Wallpapers-With-Quotes-2.jpeg',
       'var': false,
     },
     {
-      'link':
-          'http://www.quotesforthemind.com/wp-content/uploads/2018/05/inspiring-and-uplifting-quotes-quote-images-image-about-you-can-only-fail-when-you-stop-trying-to-succeed-in-life.jpg',
+      'link': 'https://www.bhaktisansar.com/wp-content/uploads/2019/07/swami-vivekananda-quotes-images.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse4.mm.bing.net/th?id=OIP.qs2UDJVTmjU_RrAL8JHE4AHaNK&pid=Api&P=0',
+      'link': 'https://i.pinimg.com/originals/a0/65/77/a065776caa7fb8a9034ba862fc10579c.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse2.mm.bing.net/th?id=OIP.PZ4LDNk3_k8ijLUK4clQ8QHaL2&pid=Api&P=0',
+      'link': 'https://tse3.mm.bing.net/th?id=OIP.y6FRJ8TIK3PPTfc0_efaCwHaF7&pid=Api&P=0',
       'var': false,
     },
     {
-      'link':
-          'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunshinequotes21-1563300013.jpg  ',
+      'link': 'https://i.pinimg.com/originals/10/71/92/107192eada5073af1321c03abd665a90.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://cdn.theculturetrip.com/wp-content/uploads/2017/04/hope-quotes-long-31.png',
+      'link': 'https://st1.photogallery.ind.sh/wp-content/uploads/indiacom/motivational-quote-by-swami-vivekananda-201709-1505116815.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse2.mm.bing.net/th?id=OIP.MLLHQs9TWK1anbqpDqJr5gHaL2&pid=Api&P=0',
+      'link': 'https://i.pinimg.com/originals/91/38/f9/9138f9299650f6d579fef09d1bcc0c2c.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.wPacsXurnjICDJQ0chLbkAHaJ4&pid=Api&P=0',
+      'link': 'https://i.pinimg.com/originals/28/c1/14/28c11407c7c7b6366005da2a7c701a48.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.BGk5IBu420X4VpmOsEtWCAHaKd&pid=Api&P=0',
+      'link': 'https://i.pinimg.com/originals/c5/4a/72/c54a72dc92613a60803eef408b36b594.jpg',
       'var': false,
     },
   ];
@@ -70,7 +62,7 @@ class _QuotesState extends State<Quotes> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Latest Quotes",
+          "Swami Vivekananda",
           style: GoogleFonts.arya(
             fontSize: 23,
             fontWeight: FontWeight.w600,
@@ -85,7 +77,7 @@ class _QuotesState extends State<Quotes> {
         child: Column(
           children: [
             ...myList.map(
-              (e) => Padding(
+                  (e) => Padding(
                 padding: const EdgeInsets.all(15),
                 child: Stack(
                   alignment: Alignment.bottomCenter,
@@ -101,8 +93,7 @@ class _QuotesState extends State<Quotes> {
                       height: 50,
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
-                        borderRadius:
-                            BorderRadius.vertical(bottom: Radius.circular(15)),
+                        borderRadius: BorderRadius.vertical(bottom: Radius.circular(15)),
                         color: Colors.black54,
                       ),
                       alignment: Alignment.center,

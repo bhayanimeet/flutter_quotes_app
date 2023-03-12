@@ -1,76 +1,66 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+
 import '../../helper/db_helper.dart';
 import '../../models/favorite.dart';
 
-class Quotes extends StatefulWidget {
-  const Quotes({Key? key}) : super(key: key);
+class Courage extends StatefulWidget {
+  const Courage({Key? key}) : super(key: key);
 
   @override
-  State<Quotes> createState() => _QuotesState();
+  State<Courage> createState() => _CourageState();
 }
 
-class _QuotesState extends State<Quotes> {
-  List<Map<String, dynamic>> myList = [
+class _CourageState extends State<Courage> {
+  List myList = [
     {
-      'link':
-          'https://i2.wp.com/tinypositive.com/wp-content/uploads/2018/08/155-Best-Deep-Meaningful-Quotes-With-Images-34.jpg?fit=734%2C1100&ssl=1',
+      'link': 'https://tse3.mm.bing.net/th?id=OIP.j4dtYOf0f2Gm3cwtveQnEwHaL2&pid=Api&P=0',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.Q92GlTcHmR45R2iUdS4jjwHaHa&pid=Api&P=0',
+      'link': 'https://quotess.net/wp-content/uploads/2017/10/1509222272_life-quote-courage-doesnt-mean-you-dont-get-afraid-courage-means-you.jpg',
       'var': false,
     },
     {
-      'link':
-          'http://www.quotesforthemind.com/wp-content/uploads/2018/05/inspiring-and-uplifting-quotes-quote-images-image-about-you-can-only-fail-when-you-stop-trying-to-succeed-in-life.jpg',
+      'link': 'https://quotescover.com/wp-content/uploads/Courage-is-knowing-what-not__quotes-by-Plato-15.png',
       'var': false,
     },
     {
-      'link':
-          'https://tse4.mm.bing.net/th?id=OIP.qs2UDJVTmjU_RrAL8JHE4AHaNK&pid=Api&P=0',
+      'link': 'https://quotescover.com/wp-content/uploads/2016/04/courage-1.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse2.mm.bing.net/th?id=OIP.PZ4LDNk3_k8ijLUK4clQ8QHaL2&pid=Api&P=0',
+      'link': 'https://d3ewd3ysu1dfsj.cloudfront.net/images/stories/original/44411.jpg?1525984310',
       'var': false,
     },
     {
-      'link':
-          'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunshinequotes21-1563300013.jpg  ',
+      'link': 'https://julieflygare.com/wp-content/uploads/2013/01/courage-doesnt-always-roar-inspirational-quote.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://cdn.theculturetrip.com/wp-content/uploads/2017/04/hope-quotes-long-31.png',
+      'link': 'https://quotescover.com/wp-content/uploads/There-is-a-courage-of__quotes-by-Alfred-Adler-37.png',
       'var': false,
     },
     {
-      'link':
-          'https://tse2.mm.bing.net/th?id=OIP.MLLHQs9TWK1anbqpDqJr5gHaL2&pid=Api&P=0',
+      'link': 'https://i0.wp.com/hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/strength-quotes-courage-is-the-most-important-1551211507.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.wPacsXurnjICDJQ0chLbkAHaJ4&pid=Api&P=0',
+      'link': 'https://tse4.mm.bing.net/th?id=OIP.HBsn5CjhM6WAkM9MjLTjIAHaL2&pid=Api&P=0',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.BGk5IBu420X4VpmOsEtWCAHaKd&pid=Api&P=0',
+      'link': 'https://cdn.quotesgram.com/img/13/13/1284212337-courage.jpg',
       'var': false,
     },
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Latest Quotes",
+          "Courage Quotes",
           style: GoogleFonts.arya(
             fontSize: 23,
             fontWeight: FontWeight.w600,
@@ -85,7 +75,7 @@ class _QuotesState extends State<Quotes> {
         child: Column(
           children: [
             ...myList.map(
-              (e) => Padding(
+                  (e) => Padding(
                 padding: const EdgeInsets.all(15),
                 child: Stack(
                   alignment: Alignment.bottomCenter,
@@ -101,8 +91,7 @@ class _QuotesState extends State<Quotes> {
                       height: 50,
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
-                        borderRadius:
-                            BorderRadius.vertical(bottom: Radius.circular(15)),
+                        borderRadius: BorderRadius.vertical(bottom: Radius.circular(15)),
                         color: Colors.black54,
                       ),
                       alignment: Alignment.center,

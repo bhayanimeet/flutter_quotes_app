@@ -1,66 +1,58 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+
 import '../../helper/db_helper.dart';
 import '../../models/favorite.dart';
 
-class Quotes extends StatefulWidget {
-  const Quotes({Key? key}) : super(key: key);
+class Roland extends StatefulWidget {
+  const Roland({Key? key}) : super(key: key);
 
   @override
-  State<Quotes> createState() => _QuotesState();
+  State<Roland> createState() => _RolandState();
 }
 
-class _QuotesState extends State<Quotes> {
-  List<Map<String, dynamic>> myList = [
+class _RolandState extends State<Roland> {
+
+  List myList = [
     {
-      'link':
-          'https://i2.wp.com/tinypositive.com/wp-content/uploads/2018/08/155-Best-Deep-Meaningful-Quotes-With-Images-34.jpg?fit=734%2C1100&ssl=1',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/2073512-Roland-Barthes-Quote-The-birth-of-the-reader-must-be-at-the-cost.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.Q92GlTcHmR45R2iUdS4jjwHaHa&pid=Api&P=0',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/2452344-Roland-Barthes-Quote-The-text-is-a-tissue-of-quotations-drawn-from.jpg',
       'var': false,
     },
     {
-      'link':
-          'http://www.quotesforthemind.com/wp-content/uploads/2018/05/inspiring-and-uplifting-quotes-quote-images-image-about-you-can-only-fail-when-you-stop-trying-to-succeed-in-life.jpg',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/2359520-Roland-Barthes-Quote-What-I-claim-is-to-live-to-the-full-the.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse4.mm.bing.net/th?id=OIP.qs2UDJVTmjU_RrAL8JHE4AHaNK&pid=Api&P=0',
+      'link': 'https://tse1.mm.bing.net/th?id=OIP.l4hjlzAgqeD7aqPgjC7qWAHaEK&pid=Api&P=0',
       'var': false,
     },
     {
-      'link':
-          'https://tse2.mm.bing.net/th?id=OIP.PZ4LDNk3_k8ijLUK4clQ8QHaL2&pid=Api&P=0',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/5707710-Roland-Barthes-Quote-How-does-meaning-get-into-the-image-Where.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunshinequotes21-1563300013.jpg  ',
+      'link': 'https://statusmind.com/images/2013/11/Clever-Facebook-Status-27330-statusmind.com.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://cdn.theculturetrip.com/wp-content/uploads/2017/04/hope-quotes-long-31.png',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/4979771-Roland-Barthes-Quote-Every-exploration-is-an-appropriation.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse2.mm.bing.net/th?id=OIP.MLLHQs9TWK1anbqpDqJr5gHaL2&pid=Api&P=0',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/1801337-Roland-Barthes-Quote-I-love-you-is-unsubtle-It-removes.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.wPacsXurnjICDJQ0chLbkAHaJ4&pid=Api&P=0',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/6472496-Roland-Barthes-Quote-There-is-nothing-in-discourse-that-is-not-to.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.BGk5IBu420X4VpmOsEtWCAHaKd&pid=Api&P=0',
+      'link': 'https://tse3.mm.bing.net/th?id=OIP.Vz5_fILLHiSD7qavFo8K2AHaEK&pid=Api&P=0',
       'var': false,
     },
   ];
@@ -70,7 +62,7 @@ class _QuotesState extends State<Quotes> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Latest Quotes",
+          "Roland Barthes",
           style: GoogleFonts.arya(
             fontSize: 23,
             fontWeight: FontWeight.w600,
@@ -85,7 +77,7 @@ class _QuotesState extends State<Quotes> {
         child: Column(
           children: [
             ...myList.map(
-              (e) => Padding(
+                  (e) => Padding(
                 padding: const EdgeInsets.all(15),
                 child: Stack(
                   alignment: Alignment.bottomCenter,
@@ -101,8 +93,7 @@ class _QuotesState extends State<Quotes> {
                       height: 50,
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
-                        borderRadius:
-                            BorderRadius.vertical(bottom: Radius.circular(15)),
+                        borderRadius: BorderRadius.vertical(bottom: Radius.circular(15)),
                         color: Colors.black54,
                       ),
                       alignment: Alignment.center,

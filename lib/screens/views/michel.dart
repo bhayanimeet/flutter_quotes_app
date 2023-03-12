@@ -1,66 +1,58 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+
 import '../../helper/db_helper.dart';
 import '../../models/favorite.dart';
 
-class Quotes extends StatefulWidget {
-  const Quotes({Key? key}) : super(key: key);
+class Michel extends StatefulWidget {
+  const Michel({Key? key}) : super(key: key);
 
   @override
-  State<Quotes> createState() => _QuotesState();
+  State<Michel> createState() => _MichelState();
 }
 
-class _QuotesState extends State<Quotes> {
-  List<Map<String, dynamic>> myList = [
+class _MichelState extends State<Michel> {
+
+  List myList = [
     {
-      'link':
-          'https://i2.wp.com/tinypositive.com/wp-content/uploads/2018/08/155-Best-Deep-Meaningful-Quotes-With-Images-34.jpg?fit=734%2C1100&ssl=1',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/1764169-Michel-de-Montaigne-Quote-There-were-many-terrible-things-in-my.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.Q92GlTcHmR45R2iUdS4jjwHaHa&pid=Api&P=0',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/2490917-Michel-de-Montaigne-Quote-If-you-press-me-to-say-why-I-loved-him-I.jpg',
       'var': false,
     },
     {
-      'link':
-          'http://www.quotesforthemind.com/wp-content/uploads/2018/05/inspiring-and-uplifting-quotes-quote-images-image-about-you-can-only-fail-when-you-stop-trying-to-succeed-in-life.jpg',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/2490918-Michel-de-Montaigne-Quote-If-you-press-me-to-say-why-I-loved-him-I.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse4.mm.bing.net/th?id=OIP.qs2UDJVTmjU_RrAL8JHE4AHaNK&pid=Api&P=0',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/3719328-Michel-de-Montaigne-Quote-There-is-no-pleasure-to-me-without.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse2.mm.bing.net/th?id=OIP.PZ4LDNk3_k8ijLUK4clQ8QHaL2&pid=Api&P=0',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/2178625-Michel-de-Montaigne-Quote-The-soul-which-has-no-fixed-purpose-in.jpg ',
       'var': false,
     },
     {
-      'link':
-          'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunshinequotes21-1563300013.jpg  ',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/1790488-Michel-de-Montaigne-Quote-The-soul-which-has-no-fixed-purpose-in.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://cdn.theculturetrip.com/wp-content/uploads/2017/04/hope-quotes-long-31.png',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/1931737-Michel-de-Montaigne-Quote-If-you-press-me-to-say-why-I-loved-him-I.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse2.mm.bing.net/th?id=OIP.MLLHQs9TWK1anbqpDqJr5gHaL2&pid=Api&P=0',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/2219984-Michel-de-Montaigne-Quote-There-were-many-terrible-things-in-my.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.wPacsXurnjICDJQ0chLbkAHaJ4&pid=Api&P=0',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/2302650-Michel-de-Montaigne-Quote-The-reverse-side-of-truth-has-a-hundred.jpg',
       'var': false,
     },
     {
-      'link':
-          'https://tse1.mm.bing.net/th?id=OIP.BGk5IBu420X4VpmOsEtWCAHaKd&pid=Api&P=0',
+      'link': 'https://quotefancy.com/media/wallpaper/3840x2160/5355254-Michel-de-Montaigne-Quote-He-who-does-not-live-in-some-degree-for.jpg',
       'var': false,
     },
   ];
@@ -70,7 +62,7 @@ class _QuotesState extends State<Quotes> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Latest Quotes",
+          "Michel De Montaigne",
           style: GoogleFonts.arya(
             fontSize: 23,
             fontWeight: FontWeight.w600,
@@ -85,7 +77,7 @@ class _QuotesState extends State<Quotes> {
         child: Column(
           children: [
             ...myList.map(
-              (e) => Padding(
+                  (e) => Padding(
                 padding: const EdgeInsets.all(15),
                 child: Stack(
                   alignment: Alignment.bottomCenter,
@@ -101,8 +93,7 @@ class _QuotesState extends State<Quotes> {
                       height: 50,
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
-                        borderRadius:
-                            BorderRadius.vertical(bottom: Radius.circular(15)),
+                        borderRadius: BorderRadius.vertical(bottom: Radius.circular(15)),
                         color: Colors.black54,
                       ),
                       alignment: Alignment.center,

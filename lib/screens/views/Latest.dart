@@ -98,6 +98,9 @@ class _LatestState extends State<Latest> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
+                          Image.asset('assets/images/book.png',height: 30),
+                          Image.asset('assets/images/copy.png',height: 30),
+                          const Icon(Icons.share, color: Colors.red, size: 30),
                           const Icon(Icons.download, color: Colors.green, size: 30),
                           GestureDetector(
                             onTap: () async{
@@ -126,7 +129,6 @@ class _LatestState extends State<Latest> {
                               size: 30,
                             ),
                           ),
-                          const Icon(Icons.share, color: Colors.red, size: 30),
                         ],
                       ),
                     ),
